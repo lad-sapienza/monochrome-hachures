@@ -22,7 +22,7 @@ jobs:
           # Create a temporary directory with the plugin name
           mkdir -p monochrome-hachures
           
-          # Copy plugin files (exclude development files)
+          # Copy plugin files (exclude development files and images)
           cp *.py monochrome-hachures/
           cp *.qml monochrome-hachures/
           cp metadata.txt monochrome-hachures/
@@ -35,7 +35,7 @@ jobs:
             cp icon.svg monochrome-hachures/
           fi
           
-          # Create the ZIP archive
+          # Create the ZIP archive (excluding images folder)
           zip -r monochrome-hachures-${{ steps.get_version.outputs.VERSION }}.zip monochrome-hachures/
       
       - name: Create Release

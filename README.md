@@ -6,6 +6,32 @@
 
 Hachures are a cartographic technique for representing terrain relief using short lines that follow the direction of slopes. Lines are longer and more opaque on steeper slopes, creating a visually striking representation of topography.
 
+## Preview
+
+![Load the DEM and open Processing Toolbox](images/01-load-the-dem-and-open-processing-toolbox.jpg)
+*Load the DEM and open Processing Toolbox*
+
+![Edit basic settings](images/02-edit-basic-settings.jpg)
+*Edit basic settings for contour interval and point spacing*
+
+![Run the algorithm](images/03-run.jpg)
+*Run the algorithm*
+
+![Styled result automatically loaded](images/04-styled-result-automatically-loaded.jpg)
+*Styled result automatically loaded with default hachure visualization*
+
+![Edit basemap style settings](images/05-edit-basemap-style-settings.jpg)
+*Edit basemap style settings*
+
+![Edit hachures style settings](images/06-edit-hachures-style-settings.jpg)
+*Edit hachures style settings to customize appearance*
+
+![Final result with minimal custom style editing](images/07-final-result-with-minimal-custom-style-editing.jpg)
+*Final result with minimal custom style editing*
+
+![Detailed final result](images/08-detailed-final-result.jpg)
+*Detailed view of final result showing hachure lines variation*
+
 ## Features
 
 - **Contour-based approach**: Generates contours, then places points along them
