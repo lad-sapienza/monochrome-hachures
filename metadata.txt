@@ -1,0 +1,14 @@
+[general]
+name=Monochrome Hachures
+description=Advanced monochrome hachures from DEM
+version=1.0
+qgisMinimumVersion=3.16
+author=LAD @Sapienza
+email=julian.bogdani@uniroma1.it
+about=Generates historically-inspired monochrome hachures from a DEM. Includes GUI preview, QML style, curved segments, adaptive density and packaging notes.
+category=Raster
+icon=icon.png
+repository=https://github.com/lad-sapienza/monochrome-hachures
+
+[python]
+plugin_class=hachures_provider.Provider
