@@ -1,7 +1,7 @@
 [general]
 name=Monochrome Hachures
 description=Advanced monochrome hachures from DEM
-version=1.0
+version=1.0.1
 qgisMinimumVersion=3.16
 author=LAD @Sapienza
 email=julian.bogdani@uniroma1.it
