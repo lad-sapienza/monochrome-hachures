@@ -1,6 +1,6 @@
 # QGIS Hachure Map Generator
 
-A QGIS Processing plugin that generates beautiful hachure maps from DEM data, following the methodology described in [Robin Hawkes' tutorial](https://robinhawkes.com/blog/qgis-monochrome-hachures/).
+  A QGIS Processing plugin that generates beautiful hachure maps from DEM data, following the methodology described in [Robin Hawkes' tutorial](https://robinhawkes.com/blog/qgis-monochrome-hachures/).
 
 ## What are Hachures?
 
@@ -64,6 +64,8 @@ make_line(
 ## Credits
 
 Based on the excellent tutorial by [Robin Hawkes](https://robinhawkes.com/blog/qgis-monochrome-hachures/).
+
+Plugin development assisted by Claude Sonnet 4.5 via GitHub Copilot.
 
 ## License
 
