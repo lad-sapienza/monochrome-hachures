@@ -1,6 +1,8 @@
 """Processing provider for hachure generation algorithms."""
 
+import os
 from qgis.core import QgsProcessingProvider
+from qgis.PyQt.QtGui import QIcon
 from .hachures_algorithm import HachureAlgorithm
 
 class Provider(QgsProcessingProvider):
@@ -41,3 +43,12 @@ class Provider(QgsProcessingProvider):
             str: The provider name shown in the Processing Toolbox.
         """
         return "Monochrome Hachures"
+
+    def icon(self):
+        """Return the provider icon.
+        
+        Returns:
+            QIcon: The icon displayed next to the provider in the Processing Toolbox.
+        """
+        icon_path = os.path.join(os.path.dirname(__file__), 'icon.png')
+        return QIcon(icon_path)

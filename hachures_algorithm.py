@@ -61,7 +61,7 @@ class HachureAlgorithm(QgsProcessingAlgorithm):
         Returns:
             str: The group name for organizing algorithms in the toolbox.
         """
-        return 'Terrain'
+        return ''
 
     def groupId(self):
         """Return the algorithm group ID.
@@ -69,7 +69,7 @@ class HachureAlgorithm(QgsProcessingAlgorithm):
         Returns:
             str: The group identifier.
         """
-        return 'terrain'
+        return ''
 
     def initAlgorithm(self, config=None):
         """Define the algorithm parameters.

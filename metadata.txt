@@ -16,7 +16,7 @@ changelog=1.0 - Initial release
     - Generate hachure points from DEM with automatic aspect/slope sampling
     - Pre-styled output with geometry generator
     - Customizable contour interval and point spacing
-experimental=False
+experimental=True
 deprecated=False
 hasProcessingProvider=True
 
