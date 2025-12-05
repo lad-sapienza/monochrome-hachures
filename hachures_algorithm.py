@@ -53,7 +53,7 @@ class HachureAlgorithm(QgsProcessingAlgorithm):
         Returns:
             str: The algorithm name shown in the Processing Toolbox.
         """
-        return 'Generate Hachure Points with Aspect/Slope'
+        return 'Generate Hachure Points'
 
     def group(self):
         """Return the algorithm group name.

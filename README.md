@@ -16,17 +16,17 @@ Hachures are a cartographic technique for representing terrain relief using shor
 
 ## Installation
 
-### Production (zip method)
-```bash
-cd ~/Desktop
-zip -r monochrome-hachures.zip monochrome-hachures -x "*.pyc" -x "*__pycache__*" -x "*.git*"
-```
-Then install via QGIS Plugin Manager → Install from ZIP
+### From GitHub Releases (Recommended)
+
+1. Go to the [Releases page](https://github.com/lad-sapienza/monochrome-hachures/releases)
+2. Download the latest `monochrome-hachures-X.X.X.zip` file
+3. In QGIS, go to **Plugins → Manage and Install Plugins → Install from ZIP**
+4. Select the downloaded ZIP file and click **Install Plugin**
 
 ## Usage
 
 1. Open QGIS Processing Toolbox
-2. Navigate to: **MPonochrome Hachures → Generate Hachure Points with Aspect/Slope**
+2. Navigate to: **MPonochrome Hachures → Terrain → Generate Hachure Points**
 3. Select your DEM raster layer
 4. Set contour interval (default: 50m)
 5. Set distance between hachure points (default: 50m)
@@ -43,7 +43,7 @@ make_line(
   $geometry,
   project(
     $geometry,
-    90 + 200 * "slope_1" / 90,
+    70 + 100 * "slope_1" / 90,
     radians(("angle" - 90) + rand(0, 8))
   )
 )
@@ -51,7 +51,7 @@ make_line(
 
 ### Adjustments
 
-- **Line length**: Modify `90 + 200 * "slope_1" / 90` (min length + range)
+- **Line length**: Modify `70 + 100 * "slope_1" / 90` (min length + range)
 - **Randomness**: Change `rand(0, 8)` to add variation to line angles
 - **Sun direction**: Modify the opacity expression `100 * (1 - abs("aspect_1" - 180) / 180)`
 - **Line width**: Adjust in the Simple Line settings
@@ -63,7 +63,7 @@ make_line(
 
 ## Credits
 
-Based on the excellent tutorial by [Robin Hawkes](https://robinhawkes.com/blog/qgis-monochrome-hachures/).
+Developed by [Julian Bogdani](mailto:julian.bogdani@uniroma1.it) at [LAD @Sapienza](https://purl.org/lad). based on the excellent tutorial by [Robin Hawkes](https://robinhawkes.com/blog/qgis-monochrome-hachures/).
 
 Plugin development assisted by Claude Sonnet 4.5 via GitHub Copilot.
 
