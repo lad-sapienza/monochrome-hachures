@@ -7,8 +7,18 @@ author=LAD @Sapienza
 email=julian.bogdani@uniroma1.it
 about=A QGIS Processing plugin that generates beautiful hachure maps from DEM data, following the methodology described in Robin Hawkes' tutorial, https://robinhawkes.com/blog/qgis-monochrome-hachures/.
 category=Raster
+tags=hachures,cartography,relief,DEM,hillshade,terrain,visualization,processing
 icon=icon.png
+homepage=https://github.com/lad-sapienza/monochrome-hachures
 repository=https://github.com/lad-sapienza/monochrome-hachures
+tracker=https://github.com/lad-sapienza/monochrome-hachures/issues
+changelog=1.0 - Initial release
+    - Generate hachure points from DEM with automatic aspect/slope sampling
+    - Pre-styled output with geometry generator
+    - Customizable contour interval and point spacing
+experimental=False
+deprecated=False
+hasProcessingProvider=True
 
 [python]
 plugin_class=hachures_provider.Provider
