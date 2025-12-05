@@ -1,0 +1,49 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+      
+      - name: Create plugin ZIP
+        run: |
+          # Create a temporary directory with the plugin name
+          mkdir -p monochrome-hachures
+          
+          # Copy plugin files (exclude development files)
+          cp *.py monochrome-hachures/
+          cp *.qml monochrome-hachures/
+          cp metadata.txt monochrome-hachures/
+          cp README.md monochrome-hachures/
+          
+          # Copy icon if it exists (PNG preferred, SVG as fallback)
+          if [ -f icon.png ]; then
+            cp icon.png monochrome-hachures/
+          elif [ -f icon.svg ]; then
+            cp icon.svg monochrome-hachures/
+          fi
+          
+          # Create the ZIP archive
+          zip -r monochrome-hachures-${{ steps.get_version.outputs.VERSION }}.zip monochrome-hachures/
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: monochrome-hachures-${{ steps.get_version.outputs.VERSION }}.zip
+          generate_release_notes: true
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
